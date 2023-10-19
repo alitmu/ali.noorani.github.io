@@ -6,6 +6,7 @@ a {
 
 h1 {
     font-size: 5rem;
+    margin-left: 40px;
 }
 
 h3 {
@@ -70,14 +71,14 @@ img.article {
     display: block;
     margin: 0px 0px 0px 0px;
     border-radius: 15pt;
-    box-shadow: 20px 30px #deda81;
+    box-shadow: 20px 30px #d7dccd;
 }
 
 img.articlehor {
     display: block;
     margin: 0px 0px 0px 0px;
     border-radius: 15pt;
-    box-shadow: 20px 30px #deda81;
+    box-shadow: 20px 30px #d7dccd;
 }
 
 figure {
@@ -105,16 +106,20 @@ div.contentp {
 
 table.ingredients {
     margin: 10px;
-    width: 100%;
+    width: 80%;
     background-color: #eaeaea;
     border: 1px solid #aaa;
     border-radius: 4px;
-    padding: 10px;
+    padding: 0px;
     padding-bottom: 20px;
 }
 
+td {
+    padding-left: 20px;
+}
+
 td.ingredients {
-    width: 80%;
+    width: 60%;
     height: 25px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -122,11 +127,16 @@ td.ingredients {
 }
 
 td.amount {
-    width: 20%;
+    width: 40%;
     padding-bottom: 10px;
     padding-top: 10px;
     height: 25px;
     border-bottom: 1px solid #aaa;
+    font-weight: 700;
+}
+
+#last_line {
+    font-weight: 700;
 }
 
 #award {
@@ -140,4 +150,17 @@ td.amount {
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+#pop_bg {
+    background-color: aqua;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }

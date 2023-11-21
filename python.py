@@ -1,8 +1,6 @@
-month=input("enter month")
+import requests
+response = requests.get("https://swapi.dev/api/people/1/")
+data = response.json()
+print(data["mass"])
 
-if month=="December" or month=="January" or month=="February" or month=="March" or month=="April":
-    print("Winter is here.")
-elif month=="May" or month=="June" or month=="July" or month=="August":
-    print("Summer is here.")
-else:
-    print("Winter is close.")
+# it calls Name value of the list from above url. response: 77

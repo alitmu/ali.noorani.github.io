@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+</head>
+
+<body>
+    <h1> Welcome to the Harry Potter Quiz! </h1>
+    <p>Welcome Muggle! Which year was the first Harry Potter Book released?</p>
+    <ul>
+        <li id="ans1">1997</li>
+        <li id="ans2">1999</li>
+        <li id="ans3">2003</li>
+    </ul>
+    <p id="ansbox"></p>
+    <script>
+        var l1 = document.querySelector("#ans1");
+        var l2 = document.querySelector("#ans2");
+        var l3 = document.querySelector("#ans3");
+        var ansbox = document.querySelector("#ansbox");
+
+        l1.addEventListener("click", clickHandler);
+        l2.addEventListener("click", clickHandler);
+        l3.addEventListener("click", clickHandler);
+
+        function clickHandler() {
+            if (this.id == "ans2") {
+                this.style.backgroundColor = "blue";
+                ansbox.textContent = "صحیح"
+            }
+            else if (this.id != "ans2") {
+                this.style.backgroundColor = "red";
+                ansbox.textContent = "غلط!"
+            }
+        }
+    </script>
+</body>
+
+</html>

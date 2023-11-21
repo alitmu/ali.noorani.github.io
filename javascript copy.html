@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+    p {
+        margin-left: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border: 0x solid gray;
+        padding: 10px;
+        transition: 100ms;
+    }
+
+    .hoverIndent {
+        margin-left: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        border: 1px solid gray;
+        padding: 10px;
+        transition: 500ms;
+    }
+
+    .hoverReset {
+        margin-left: 20;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        border: 0x solid gray;
+        padding: 10px;
+        transition: 500ms;
+    }
+</style>
+
+<head>
+    <title> </title>
+</head>
+
+<body>
+    <h1 id="heading1"> Click Add to Cart to add items </h1>
+    <p id="item1">"OK Computer"</p>
+    <p>Price: $10</p>
+    <input type="button" value="Add to cart" id="addtoCart">
+    <hr>
+    <p id="item2">"Hail to the Thief"</p>
+    <p>Price: $15</p>
+    <input type="button" value="Add to cart" id="addtoCart">
+    <hr>
+    <p id="item3">"In Rainbows"</p>
+    <p>Price: $20</p>
+    <input type="button" value="Add to cart" id="addtoCart">
+    <hr>
+    <p>Cart total <br> <textarea type="number" value="1" id="totalValue"></p>
+    <script>    
+        var price1 = "10"
+        var price2 = "15"
+        var price3 = "20"
+        var cartTotal = 0
+
+
+
+        var button = document.querySelector("#mybutton");
+        var para2 = document.querySelector("#item2");
+        para2.addEventListener("mouseover", changeColor);
+        para2.addEventListener("mouseout", changeColorBack);
+
+        button.addEventListener("mouseover", whenClicked);
+        button.addEventListener("mouseout", whenOut);
+
+        var p2content = para2.textContent;
+
+        var para1 = document.querySelector("#item1");
+        para1.addEventListener("mouseover", changeColor);
+        para1.addEventListener("mouseout", changeColorBack);
+
+        var para3 = document.querySelector("#item3");
+        para3.addEventListener("mouseover", changeColor);
+        para3.addEventListener("mouseout", changeColorBack);
+        // function definitions ///////
+
+        function changeColor() {
+            this.style.backgroundColor = "#A5D4B0";
+            this.className = "hoverIndent"
+            this.textContent = "Changed content"
+        }
+
+        function changeColorBack() {
+            this.style.backgroundColor = "white"
+            this.className = "hoverReset";
+            this.textContent = "Hail to the Thief"
+        }
+
+        var para2 = document.querySelector("#addtoCart");
+        para1.addEventListener("clicked", price1);
+        para2.addEventListener = ()
+        }
+        function whenOut() {
+            para2.textContent = p2content;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,166 +1,94 @@
-p,
-h1,
-a {
-    font-family: 'Roboto', sans-serif;
+p {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 5rem;
-    margin-left: 40px;
+    font-family: 'Paytone One', sans-serif;
+    font-size: 3rem;
+    color: #512D7A;
 }
 
 h3 {
-    font-family: 'Young Serif', serif;
-    font-size: 2.8;
-    font-weight: 400;
+    font-family: 'Unna', serif;
+    text-transform: uppercase;
 }
 
-h2 {
+span {
     font-family: 'Young Serif', serif;
+    font-size: 1.2rem;
     font-weight: 400;
-    font-size: 2.6rem;
 }
 
 body {
-    justify-content: center;
-    flex-grow: 5;
-    flex-basis: auto;
-    background-size: 400px 400px;
-    background-image: url(barbecue.jpg);
-    background-repeat: repeat;
-    padding: 30px 30px 30px 30px;
+    background-color: #F7F4EF;
 }
 
-aside {
+.input {
+    width: 400px;
+}
+
+.searchrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+input {
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+section.card {
+    display: flex;
+    background-color: white;
     width: 80%;
-    padding-left: 0.5rem;
-    margin-left: 0.5rem;
-    float: center;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-    font-size: x-large;
+    padding-right: 0px;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
-summary {
-    font-family: 'Young Serif', serif;
-}
-
-details {
-    padding: 0.5em 0.5em 0;
-    margin-top: 15px;
-}
-
-summary {
-    font-weight: bold;
-    margin: -0.5em -0.5em 0;
-    padding: 0.5em;
-}
-
-details[open] {
-    padding: 0.5em;
-    font-family: 'Young Serif', serif;
-}
-
-details[open] summary {
-    margin-bottom: 0.5em;
-    font-family: 'Young Serif', serif;
-}
-
-img.article {
-    display: block;
-    margin: 0px 0px 0px 0px;
-    border-radius: 15pt;
-    box-shadow: 20px 30px #d7dccd;
-}
-
-img.articlehor {
-    display: block;
-    margin: 0px 0px 0px 0px;
-    border-radius: 15pt;
-    box-shadow: 20px 30px #d7dccd;
-}
-
-figure {
-    float: left;
-}
-
-figcaption {
-    font-size: 13px;
-    float: bottom;
-    margin-left: 45px;
-    transform: translateY(5px);
-}
-
-.clear {
-    list-style-type: none;
-    font-family: 'Young Serif', serif;
-}
-
-div.contentp {
-    background-color: rgb(241, 234, 168);
-    padding: 30px 30px 30px 30px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-}
-
-table.ingredients {
-    margin: 10px;
-    width: 80%;
-    background-color: #eaeaea;
-    border: 1px solid #aaa;
-    border-radius: 4px;
+img.card {
     padding: 0px;
-    padding-bottom: 20px;
 }
 
-td {
-    padding-left: 20px;
+img.icon_title {
+    height: 24px;
+    width: 24px;
 }
 
-td.ingredients {
-    width: 60%;
-    height: 25px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    border-bottom: 1px solid #aaa;
+.cardstack {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
 }
 
-td.amount {
-    width: 40%;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    height: 25px;
-    border-bottom: 1px solid #aaa;
-    font-weight: 700;
+.innerCardContent {
+    display: block;
+    flex-flow: row;
 }
 
-#last_line {
-    font-weight: 700;
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-#award {
-    display: flex;
-    float: right;
-    align-content: right;
-    justify-content: flex-end;
-    width: 100px;
-}
-
-hr {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-}
-
-#pop_bg {
-    background-color: aqua;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+.btn:hover {
+    background-color: RoyalBlue;
 }

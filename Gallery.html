@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushroom Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Gloock&family=Paytone+One&family=Roboto:wght@100;300;400;500;700&family=Unna:ital,wght@0,400;0,700;1,400&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="indexstyle.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&family=Jost:wght@400;600&display=swap">
+
+    <style>
+        body {
+            font-family: 'Jost', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 20px;
+            background-color: #F8EFE9;
+        }
+
+        #galleryTitle {
+            font-family: 'Livvic', 'Jost', Arial, sans-serif;
+        }
+
+        #gallery {
+            max-width: 100%;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        #slideshow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .slide {
+            flex: 0 0 calc(33.33% - 2cm);
+            box-sizing: border-box;
+            margin-bottom: 1cm;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .mushroomName {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #341f4f;
+        }
+
+        #galleryTitle {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #341f4f;
+        }
+
+        #searchBar {
+            margin-top: 1cm;
+            text-align: left;
+        }
+
+        #searchBar label {
+            margin-right: 10px;
+        }
+
+        #mushroomFilter {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header starts -->
+    <header>
+        <div class="logorow column" style="flex-grow: 1;"><a class="logorow column" style="flex-grow: 1;"
+                href="index.html"><img src="images/mushroom-logo.png">`
+                <h1 style="clear: both;">MushROOM</h1>
+            </a><br>
+        </div>
+        <div style="flex-grow: 4;"><span>Search mushrooms and recipes</span>
+            <div class="input-icons searchrow" style="gap: 8px; width: 50%;"><input type="text" id="Search"
+                    class="input-field searchbar">
+                <div class="logorow column" style="flex-grow: 1;"><a href="search.html"><button id="searchButton"
+                            class="btn"><i class="fa fa-search"></i> Search</button></a></div>
+                <button class="secondarybtn"><i class="fa fa-filter"></i> Filters</button>
+            </div>
+    </header>
+    <!-- //Header ends -->
+
+    <div id="searchBar" style="margin-bottom: 20px;">
+        <label for="mushroomFilter">Filter by Mushroom Type:</label>
+        <select id="mushroomFilter" onchange="filterGallery()">
+            <option value="all">All Mushrooms</option>
+            <option value="portobello">Portobello</option>
+            <option value="oyster">Oyster</option>
+            <option value="button">Button</option>
+            <option value="morel">Morel</option>
+            <option value="flyAgaric">Fly Agaric</option>
+        </select>
+
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Enter mushroom name">
+
+        <!-- Removed the onclick attribute from the button -->
+        <button class="secondarybtn">Apply</button>
+    </div>
+    <div id="gallery">
+        <div id="slideshow" style="display:inline-flex; flex-wrap: wrap;">
+
+            <div class="slide" data-type="portobello" id="portobelloSlide">
+                <img src="images/image1.jpg" alt="Mushroom 1">
+                <div class="mushroomName">Amanita muscaria</div>
+            </div>
+            <div class="slide" data-type="oyster">
+                <img src="images/image2.jpg" alt="Mushroom 2">
+                <div class="mushroomName">Death Cap</div>
+            </div>
+            <div class="slide" data-type="button">
+                <img src="images/image3.jpg" alt="Mushroom 3">
+                <div class="mushroomName">Oyster Mushroom</div>
+            </div>
+            <div class="slide" data-type="morel">
+                <img src="images/image4.jpg" alt="Mushroom 4">
+                <div class="mushroomName">Honey Fungus</div>
+            </div>
+            <div class="slide" data-type="button">
+                <img src="images/image5.jpg" alt="Mushroom 5">
+                <div class="mushroomName">Linzhi</div>
+            </div>
+            <div class="slide" data-type="portobello">
+                <img src="images/image6.jpg" alt="Mushroom 6">
+                <div class="mushroomName">Pholiota</div>
+            </div>
+            <div class="slide" data-type="oyster">
+                <img src="images/image7.jpg" alt="Mushroom 7">
+                <div class="mushroomName">Pholiota squarrosa</div>
+            </div>
+            <div class="slide" data-type="morel">
+                <img src="images/image8.jpg" alt="Mushroom 8">
+                <div class="mushroomName">Omphalotus japonicus</div>
+            </div>
+            <div class="slide" data-type="flyAgaric">
+                <img src="images/image9.jpg" alt="Mushroom 9">
+                <div class="mushroomName">Mycena haematopus</div>
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+    <script>
+        function filterGallery() {
+            var filterType = document.getElementById("mushroomFilter").value.toLowerCase();
+            var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+            var slides = document.querySelectorAll('.slide');
+
+            slides.forEach(function (slide) {
+                var type = slide.getAttribute('data-type').toLowerCase();
+                var name = slide.querySelector('.mushroomName').innerText.toLowerCase();
+
+                if (filterType === 'all') {
+                    var display = name.includes(searchTerm) || searchTerm === '';
+                    slide.style.display = display ? 'block' : 'none';
+                } else if (filterType === 'portobello') {
+                    var display = type === 'portobello' && (name.includes(searchTerm) || searchTerm === '');
+                    document.getElementById('portobelloSlide').style.display = display ? 'block' : 'none';
+                    slide.style.display = (display && type === 'portobello') ? 'block' : 'none';
+                } else {
+                    var display = type === filterType && (name.includes(searchTerm) || searchTerm === '');
+                    slide.style.display = display ? 'block' : 'none';
+                    document.getElementById('portobelloSlide').style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <!--FOOTER -->
+    <footer>
+        <br>
+        All rights reserved by MushROOM Media. 2023
+    </footer>
+    <!--FOOTER ends -->
+</body>
+
+</html>

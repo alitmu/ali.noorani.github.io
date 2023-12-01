@@ -3,15 +3,26 @@ p {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-family: 'Paytone One', sans-serif;
     font-size: 3rem;
+    font-weight: 700;
     color: #7C45BA;
+}
+
+h2 {
+    font-family: 'Livvic', sans-serif;
+    color: #512D7A;
+    text-align: center;
+    margin: 0 0 20px;
 }
 
 h3 {
     font-family: 'Unna', serif;
-    text-transform: uppercase;
 }
 
 span {
@@ -22,10 +33,35 @@ span {
 
 body {
     background-color: #F7F4EF;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 0;
+    color: #512D7A;
 }
 
-.input {
+header {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.input[text],
+select {
     width: 500px;
+    height: 25px;
+    border: 1px solid #EAD1DC;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[checkbox] {
+    width: 24px;
+}
+
+input {
     height: 30px;
 }
 
@@ -34,10 +70,12 @@ body {
     align-items: center;
     gap: 10px;
     clear: both;
+    height: 40px;
 }
 
 .searchbar {
-    width: 100%;
+    width: 300px;
+    height: 40px;
 }
 
 .logorow {
@@ -52,7 +90,8 @@ body {
     padding: 5px;
 }
 
-input {
+input[text],
+select {
     /*
     padding-top: 4px; 
     padding-bottom: 4px; 
@@ -106,5 +145,52 @@ img.icon_title {
 }
 
 .btn:hover {
-    background-color: RoyalBlue;
+    background-color: #A84D75;
+    color: white;
+}
+
+.secondarybtn {
+    background-color: #fff;
+    border: 1 solid #7C45BA;
+    color: #7C45BA;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.secondarybtn:hover {
+    background-color: #A84D75;
+    color: white;
+}
+
+.container {
+    margin-left: 200px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.image-container {
+    margin-left: 20px;
+    /* Adjust the margin as needed */
+    width: 50%;
+}
+
+.formcontainer {
+
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+footer {
+    height: 100px;
+    display: block;
+    justify-content: baseline;
+    text-align: center;
+}
+
+#displayResult {
+    margin-left: 200px;
 }
